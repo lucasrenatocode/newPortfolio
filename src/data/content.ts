@@ -80,10 +80,9 @@ export const projects: Project[] = [
     description:
       'An elegant, conversion-focused landing page for a premium aesthetics clinic, with refined motion design and a soft rosé palette.',
     tech: ['React', 'TypeScript', 'Framer Motion'],
-    demoUrl: 'https://deentalclinic.vercel.app/',
+    demoUrl: 'https://odontoviva.vercel.app/',
     previewImage: dental,
   },
-  
   {
     tag: 'Web Application',
     title: 'Dolce Femme',
