@@ -2,7 +2,7 @@ import lash from '../assets/preview/lash-designer.webp'
 import dental from '../assets/preview/dentalClinic.webp'
 import dolce from '../assets/preview/dolceFemme.webp'
 import fernando from '../assets/preview/drFernando.webp'
-
+import vanguard from '../assets/preview/vanguard.webp'
 export interface Skill {
   name: string
   level: string
@@ -73,6 +73,15 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'CSS Modules'],
     demoUrl: 'https://lashsoft.vercel.app/',
     previewImage: lash,
+  },
+  {
+    tag: 'Web Application',
+    title: 'Vanguard Advocacy',
+    description:
+      'Modern landing page for a law firm, designed to build credibility, strengthen online presence, and increase client acquisition through a strategic, responsive design.',
+    tech: ['React', 'TypeScript', 'Tailwind'],
+    demoUrl: 'https://vanguaradvocacy.vercel.app/',
+    previewImage: vanguard,
   },
   {
     tag: 'Web Application',
