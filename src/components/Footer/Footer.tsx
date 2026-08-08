@@ -16,7 +16,7 @@ export default function Footer() {
         </a>
 
         <div className={styles.socials}>
-          <a href="https://github.com/lucasrenatolu5-spec" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/lucasrenatocode" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <GitHubIcon />
           </a>
           <a href="https://www.linkedin.com/in/lucasrenatoo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">

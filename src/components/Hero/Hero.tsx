@@ -24,7 +24,6 @@ export default function Hero() {
   const codeCardRef = useRef<HTMLDivElement | null>(null)
   const statusCardRef = useRef<HTMLDivElement | null>(null)
   const statNumRefs = useRef<(HTMLDivElement | null)[]>([])
-
   const primaryCtaRef = useMagnetic<HTMLAnchorElement>()
   const ghostCtaRef = useMagnetic<HTMLAnchorElement>()
 
