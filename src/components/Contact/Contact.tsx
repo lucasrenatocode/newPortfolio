@@ -65,7 +65,7 @@ const handleSubmit = (e: FormEvent) => {
             </p>
             <div className={styles.links}>
               <a
-                href="https://github.com/lucasrenatolu5-spec"
+                href="https://github.com/lucasrenatocode"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.link} glass`}
