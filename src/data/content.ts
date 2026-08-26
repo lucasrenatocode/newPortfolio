@@ -3,6 +3,7 @@ import dental from '../assets/preview/dentalClinic.webp'
 import dolce from '../assets/preview/dolceFemme.webp'
 import fernando from '../assets/preview/drFernando.webp'
 import vanguard from '../assets/preview/vanguard.webp'
+import portacu from '../assets/preview/portacu.webp'
 export interface Skill {
   name: string
   level: string
@@ -66,7 +67,7 @@ export const pillars: Pillar[] = [
 
 export const projects: Project[] = [
   {
-    tag: 'Web Application',
+    tag: 'Landing Page',
     title: 'Lash Designer Studio',
     description:
       'A booking-focused page for a lash design studio, featuring real service pricing and a clean, feminine visual identity.',
@@ -102,13 +103,22 @@ export const projects: Project[] = [
     previewImage: dolce,
   },
   {
-    tag: 'Web Application',
+    tag: 'Landing Page',
     title: 'Dr. Fernando website',
     description:
       'Professional legal services with integrity and dedication. Protecting your rights with trusted legal solutions.',
     tech: ['React', 'TypeScript', 'Vite'],
     demoUrl: 'https://projectadvogado.vercel.app/',
     previewImage: fernando,
+  },
+  {
+    tag: 'Landing Page',
+    title: 'Super Port Acu',
+    description:
+      'Premium domain available for sale. Secure a memorable, valuable domain name to strengthen your brand, attract more visitors, and build a trusted online presence.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    demoUrl: 'https://superportacu.com.br/',
+    previewImage: portacu,
   },
 ]
 
