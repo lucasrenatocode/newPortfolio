@@ -7,8 +7,8 @@ import { useLanguage } from '../../i18n/LanguageContext'
 export default function Hero() {
   const { t } = useLanguage()
 
-  const sectionRef   = useRef<HTMLDivElement | null>(null)
-  const headlineRef  = useRef<HTMLHeadingElement | null>(null)
+  const sectionRef    = useRef<HTMLDivElement | null>(null)
+  const headlineRef   = useRef<HTMLHeadingElement | null>(null)
   const primaryCtaRef = useMagnetic<HTMLAnchorElement>()
   const ghostCtaRef   = useMagnetic<HTMLAnchorElement>()
 
@@ -38,7 +38,6 @@ export default function Hero() {
 
   return (
     <section className={styles.hero} id="hero" ref={sectionRef}>
-      {/* Glow de fundo decorativo */}
       <div className={styles.bgGlow} aria-hidden="true" />
 
       <div className={`container ${styles.inner}`}>
@@ -46,51 +45,35 @@ export default function Hero() {
         {/* Eyebrow */}
         <p className={styles.eyebrow}>
           <span className={styles.dot} aria-hidden="true" />
-          Desenvolvedor Front-End · Disponível para projetos
+          {t.hero.available}
         </p>
 
-        {/* Headline de impacto — ocupa toda a largura */}
+        {/* Headline */}
         <h1 className={styles.title} ref={headlineRef}>
           <span className={styles.titleLine}>
-            <span>Seu concorrente</span>
+            <span>{t.hero.titleLine1}</span>
           </span>
           <span className={styles.titleLine}>
             <span>
-              ainda não tem{' '}
-              <em className={styles.highlight}>site.</em>
+              {t.hero.titleLine2Pre}{' '}
+              <em className={styles.highlight}>{t.hero.titleLine2Em}</em>
             </span>
           </span>
           <span className={styles.titleLine}>
-            <span>Aproveita enquanto dá.</span>
+            <span>{t.hero.titleLine3}</span>
           </span>
         </h1>
-
-        {/* Subtítulo */}
-        <p className={styles.sub}>
-          Desenvolvo landing pages e sites profissionais com entrega rápida,
-          código limpo e design que converte visitantes em clientes reais.
-        </p>
-
         {/* CTAs */}
         <div className={styles.ctas}>
-          <a
-            href="#projects"
-            ref={primaryCtaRef}
-            className="btn btn-primary"
-          >
-            <span>Ver Projetos</span>
+          <a href="#projects" ref={primaryCtaRef} className="btn btn-primary">
+            <span>{t.hero.ctaPrimary}</span>
           </a>
-          <a
-            href="#contact"
-            ref={ghostCtaRef}
-            className="btn btn-ghost"
-          >
-            <span>Fale Comigo</span>
+          <a href="#contact" ref={ghostCtaRef} className="btn btn-ghost">
+            <span>{t.hero.ctaGhost}</span>
           </a>
         </div>
       </div>
 
-      {/* Scroll cue */}
       <div className={styles.scrollCue}>
         <span>SCROLL</span>
         <span className={styles.scrollCueLine} />

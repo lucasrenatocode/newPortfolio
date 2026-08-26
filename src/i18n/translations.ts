@@ -15,7 +15,6 @@ export interface TranslationShape {
     titleLine2Pre: string
     titleLine2Em: string
     titleLine3: string
-    subtitle: string
     ctaPrimary: string
     ctaGhost: string
     stat1: string
@@ -89,19 +88,17 @@ export const translations: Record<Lang, TranslationShape> = {
       cta: 'Vamos falar',
     },
     hero: {
-      greeting: 'Olá, eu sou o Lucas',
-      titleLine1: 'Desenvolvedor Front-end',
-      titleLine2Pre: 'criando',
-      titleLine2Em: 'interfaces',
-      titleLine3: 'que parecem vivas.',
-      subtitle:
-        'Eu construo experiências web rápidas, acessíveis e bem pensadas com React e TypeScript — transformando ideias em interfaces que as pessoas gostam de usar.',
-      ctaPrimary: 'Ver Projetos',
-      ctaGhost: 'Fale Comigo',
-      stat1: 'PROJETOS ENTREGUES',
-      stat2: 'TECNOLOGIAS PRINCIPAIS',
-      stat3: '% PRONTO P/ REMOTO',
-      available: 'Disponível para projetos',
+       greeting: 'Olá, eu sou o Lucas',
+        titleLine1: 'Seu concorrente',
+        titleLine2Pre: 'ainda não tem',
+        titleLine2Em: 'site.',
+        titleLine3: 'Aproveita enquanto dá.',
+        ctaPrimary: 'Ver Projetos',
+        ctaGhost: 'Fale Comigo',
+        stat1: 'PROJETOS ENTREGUES',
+        stat2: 'TECNOLOGIAS PRINCIPAIS',
+        stat3: '% PRONTO P/ REMOTO',
+        available: 'Disponível para projetos',
     },
     about: {
       eyebrow: 'Sobre',
@@ -176,12 +173,10 @@ export const translations: Record<Lang, TranslationShape> = {
     },
     hero: {
       greeting: "Hello, I'm Lucas",
-      titleLine1: 'Front-end Developer',
-      titleLine2Pre: 'crafting',
-      titleLine2Em: 'interfaces',
-      titleLine3: 'that feel alive.',
-      subtitle:
-        'I build fast, accessible and visually-considered web experiences with React and TypeScript — turning ideas into interfaces people enjoy using.',
+      titleLine1: 'Your competitor',
+      titleLine2Pre: "doesn't have a",
+      titleLine2Em: 'website.',
+      titleLine3: 'Take advantage while you can.',
       ctaPrimary: 'View Projects',
       ctaGhost: 'Contact Me',
       stat1: 'PROJECTS SHIPPED',
