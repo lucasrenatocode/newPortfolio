@@ -68,7 +68,7 @@
  
 /* Título principal — grande e impactante */
 .title {
-  font-size: clamp(48px, 8vw, 100px);
+  font-size: clamp(46px, 7vw, 100px);
   line-height: 1.02;
   font-weight: 700;
   margin-bottom: 28px;
