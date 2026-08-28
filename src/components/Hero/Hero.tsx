@@ -73,11 +73,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      <div className={styles.scrollCue}>
-        <span>SCROLL</span>
-        <span className={styles.scrollCueLine} />
-      </div>
     </section>
   )
 }

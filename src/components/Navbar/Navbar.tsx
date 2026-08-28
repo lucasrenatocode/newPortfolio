@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className={`container ${styles.inner}`}>
           <a href="#hero" className={styles.logo}>
             <span className={styles.logoDot} />
-            lucas<span className="text-gradient">.dev</span>
+            lucas<span className="text-gradient">Dev</span>
           </a>
 
           <ul className={styles.links}>
