@@ -76,6 +76,15 @@ export const projects: Project[] = [
     previewImage: lash,
   },
   {
+    tag: 'Landing Page',
+    title: 'Super Port Acu',
+    description:
+      'Premium domain available for sale. Secure a memorable, valuable domain name to strengthen your brand, attract more visitors, and build a trusted online presence.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    demoUrl: 'https://superportacu.com.br/',
+    previewImage: portacu,
+  },
+  {
     tag: 'Web Application',
     title: 'Vanguard Advocacy',
     description:
@@ -110,15 +119,6 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Vite'],
     demoUrl: 'https://projectadvogado.vercel.app/',
     previewImage: fernando,
-  },
-  {
-    tag: 'Landing Page',
-    title: 'Super Port Acu',
-    description:
-      'Premium domain available for sale. Secure a memorable, valuable domain name to strengthen your brand, attract more visitors, and build a trusted online presence.',
-    tech: ['HTML', 'CSS', 'JavaScript'],
-    demoUrl: 'https://superportacu.com.br/',
-    previewImage: portacu,
   },
 ]
 
