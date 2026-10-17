@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import gsap from 'gsap'
 import { useMagnetic } from '../../hooks/useMagnetic'
 import styles from './Hero.module.css'
@@ -7,12 +7,11 @@ import { useLanguage } from '../../i18n/LanguageContext'
 export default function Hero() {
   const { t } = useLanguage()
 
-  const sectionRef    = useRef<HTMLDivElement | null>(null)
-  const headlineRef   = useRef<HTMLHeadingElement | null>(null)
   const primaryCtaRef = useMagnetic<HTMLAnchorElement>()
   const ghostCtaRef   = useMagnetic<HTMLAnchorElement>()
 
   useEffect(() => {
+    // Timeline de entrada: eyebrow → linhas do título → destaque → CTAs
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
 
     tl.fromTo(`.${styles.eyebrow}`,
@@ -23,23 +22,15 @@ export default function Hero() {
       .fromTo(`.${styles.highlight}`,
         { backgroundSize: '0% 100%' },
         { backgroundSize: '100% 100%', duration: 0.9, ease: 'power2.out' }, 1.1)
-      .fromTo(`.${styles.sub}`,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8 }, 1.0)
       .fromTo(`.${styles.ctas} .btn`,
         { opacity: 0, y: 20, scale: 0.95 },
         { opacity: 1, y: 0, scale: 1, duration: 0.7, stagger: 0.12 }, 1.2)
-      .fromTo(`.${styles.scrollCue}`,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.6 }, 1.6)
 
     return () => { tl.kill() }
   }, [])
 
   return (
-    <section className={styles.hero} id="hero" ref={sectionRef}>
-      <div className={styles.bgGlow} aria-hidden="true" />
-
+    <section className={styles.hero} id="hero">
       <div className={`container ${styles.inner}`}>
 
         {/* Eyebrow */}
@@ -49,7 +40,7 @@ export default function Hero() {
         </p>
 
         {/* Headline */}
-        <h1 className={styles.title} ref={headlineRef}>
+        <h1 className={styles.title}>
           <span className={styles.titleLine}>
             <span>{t.hero.titleLine1}</span>
           </span>
@@ -63,6 +54,7 @@ export default function Hero() {
             <span>{t.hero.titleLine3}</span>
           </span>
         </h1>
+
         {/* CTAs */}
         <div className={styles.ctas}>
           <a href="#projects" ref={primaryCtaRef} className="btn btn-primary">

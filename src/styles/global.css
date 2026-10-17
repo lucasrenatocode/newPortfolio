@@ -1,22 +1,90 @@
+/* =====================================================
+   GLOBAL — cores sólidas fixas por seção (sem gradiente)
+   Cada seção é envolvida por <div data-theme="..."> no App.tsx
+   e recebe as cores do tema correspondente, sem JS.
+   ===================================================== */
+
+/* Padrão (dark): vale pra tudo fora dos wrappers, como a Navbar */
 :root {
-  --bg: #0a0a12;
-  --bg-soft: #0e0e1a;
+  --bg: #0b0b0c;
+  --bg-soft: #121214;
+  --card: #141416;
   --surface: rgba(255, 255, 255, 0.04);
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --text: #eceefb;
-  --text-muted: #8b8fa8;
-  --text-dim: #5d6080;
-  --violet: #8b5cf6;
-  --violet-soft: #a78bfa;
-  --blue: #4f8bff;
-  --cyan: #5ee9c8;
-  --gradient: linear-gradient(120deg, #8b5cf6 0%, #4f8bff 55%, #5ee9c8 100%);
-  --gradient-2: linear-gradient(135deg, #4f8bff 0%, #8b5cf6 100%);
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --text: #f2f2f0;
+  --text-muted: #9a9a9f;
+  --text-dim: #6b6b70;
+  --accent: #3b82f6;
+  --btn-bg: #f2f2f0;
+  --btn-text: #0b0b0c;
+
   --radius: 20px;
   --radius-sm: 12px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Aliases das variáveis antigas apontando pra cor sólida do tema.
+   Ficam em [data-theme] também pra resolver com o --accent de cada seção.
+   Quando limpar os CSS Modules, dá pra remover este bloco. */
+:root,
+[data-theme] {
+  --violet: var(--accent);
+  --violet-soft: var(--accent);
+  --blue: var(--accent);
+  --cyan: var(--accent);
+  --gradient: linear-gradient(var(--accent), var(--accent));
+  --gradient-2: linear-gradient(var(--accent), var(--accent));
+}
+
+/* ---------- Temas ---------- */
+[data-theme] {
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme='dark'] {
+  --bg: #0b0b0c;
+  --bg-soft: #121214;
+  --card: #141416;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --text: #f2f2f0;
+  --text-muted: #9a9a9f;
+  --text-dim: #6b6b70;
+  --accent: #3b82f6;
+  --btn-bg: #f2f2f0;
+  --btn-text: #0b0b0c;
+}
+
+[data-theme='light'] {
+  --bg: #f5f3ee;
+  --bg-soft: #ece9e2;
+  --card: #ffffff;
+  --surface: rgba(0, 0, 0, 0.04);
+  --surface-border: rgba(0, 0, 0, 0.1);
+  --text: #111111;
+  --text-muted: #5e5e5a;
+  --text-dim: #8a8a85;
+  --accent: #2563eb;
+  --btn-bg: #111111;
+  --btn-text: #f5f3ee;
+}
+
+[data-theme='brand'] {
+  --bg: #2563eb;
+  --bg-soft: #1d4ed8;
+  --card: #1d4ed8;
+  --surface: rgba(255, 255, 255, 0.1);
+  --surface-border: rgba(255, 255, 255, 0.25);
+  --text: #ffffff;
+  --text-muted: #d6e2fd;
+  --text-dim: #a9c1fa;
+  --accent: #ffffff;
+  --btn-bg: #ffffff;
+  --btn-text: #2563eb;
+}
+
+/* ---------- Base ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +96,8 @@ html {
 }
 
 ::selection {
-  background: var(--violet);
-  color: #fff;
+  background: var(--accent);
+  color: var(--bg);
 }
 
 body {
@@ -76,7 +144,7 @@ img {
 }
 
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--violet-soft);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
   border-radius: 8px;
 }
@@ -92,18 +160,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   padding: 0 32px;
 }
 
+/* Destaque em cor sólida (mantém o nome da classe pra não mexer nos componentes) */
 .text-gradient {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
 }
 
 .glass {
-  background: rgba(20, 20, 32, 0.75);
+  background: var(--card);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius);
-  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
 }
 
 .eyebrow {
@@ -114,7 +180,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: 12.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--violet-soft);
+  color: var(--accent);
   margin-bottom: 18px;
 }
 
@@ -123,8 +189,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--gradient);
-  box-shadow: 0 0 10px var(--violet);
+  background: var(--accent);
 }
 
 .section-title {
@@ -159,6 +224,7 @@ section {
   opacity: 0;
 }
 
+/* ---------- Botões ---------- */
 .btn {
   position: relative;
   display: inline-flex;
@@ -173,10 +239,11 @@ section {
   will-change: transform;
 }
 
+/* Primário: cor sólida que inverte conforme o tema (sem gradiente nem glow) */
 .btn-primary {
-  background: var(--gradient);
-  color: #fff;
-  box-shadow: 0 8px 30px -8px rgba(139, 92, 246, 0.6);
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transition: opacity 0.3s var(--ease);
 }
 
 .btn-primary span {
@@ -184,27 +251,17 @@ section {
   z-index: 2;
 }
 
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, #a78bfa, #6fa8ff, #5ee9c8);
-  opacity: 0;
-  transition: opacity 0.4s var(--ease);
-  z-index: 1;
-}
-
-.btn-primary:hover::before {
-  opacity: 1;
+.btn-primary:hover {
+  opacity: 0.88;
 }
 
 .btn-ghost {
-  background: var(--surface);
+  background: transparent;
   border: 1px solid var(--surface-border);
   color: var(--text);
+  transition: border-color 0.3s var(--ease);
 }
 
 .btn-ghost:hover {
-  border-color: rgba(167, 139, 250, 0.5);
-  background: rgba(139, 92, 246, 0.07);
+  border-color: var(--text);
 }

@@ -1,7 +1,7 @@
 /* =====================================================
    ESTILOS: Hero — frase de impacto, alinhado à esquerda
    ===================================================== */
- 
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -14,20 +14,7 @@
   overflow: hidden;
   text-align: left;
 }
- 
-/* Glow decorativo de fundo */
-.bgGlow {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: 500px;
-  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
- 
+
 /* Container interno alinhado à esquerda */
 .inner {
   position: relative;
@@ -37,7 +24,7 @@
   align-items: flex-start;
   max-width: 900px;
 }
- 
+
 /* Eyebrow */
 .eyebrow {
   display: inline-flex;
@@ -49,48 +36,42 @@
   margin-bottom: 28px;
   opacity: 0;
 }
- 
+
+/* Indicador de disponibilidade: ponto verde estático, sem pulso nem glow */
 .dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #5ee9c8;
-  box-shadow: 0 0 0 0 rgba(94, 233, 200, 0.6);
-  animation: ping 2s ease-out infinite;
+  background: #22c55e;
   flex-shrink: 0;
 }
- 
-@keyframes ping {
-  0%   { box-shadow: 0 0 0 0 rgba(94, 233, 200, 0.5); }
-  70%  { box-shadow: 0 0 0 8px rgba(94, 233, 200, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(94, 233, 200, 0); }
-}
- 
+
 /* Título principal — grande e impactante */
 .title {
-  font-size: clamp(46px, 7vw, 100px);
+  font-size: clamp(56px, 8vw, 110px);
   line-height: 1.02;
   font-weight: 700;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   letter-spacing: -0.03em;
 }
- 
+
 /* Cada linha com overflow hidden para animação de entrada */
 .titleLine {
   overflow: hidden;
   display: block;
 }
- 
+
 .titleLine span {
   display: block;
   transform: translateY(110%);
 }
- 
-/* Palavra em destaque com gradiente */
+
+/* Palavra em destaque: cor sólida (sem gradiente), revelada da esquerda
+   pra direita pelo GSAP animando o background-size */
 .highlight {
   font-style: normal;
   position: relative;
-  background: var(--gradient);
+  background-image: linear-gradient(var(--accent, #3b82f6), var(--accent, #3b82f6));
   background-size: 0% 100%;
   background-repeat: no-repeat;
   background-position: left bottom 4px;
@@ -99,17 +80,7 @@
   -webkit-text-fill-color: transparent;
   padding-bottom: 4px;
 }
- 
-/* Subtítulo */
-.sub {
-  font-size: clamp(15px, 1.6vw, 18px);
-  color: var(--text-muted);
-  max-width: 500px;
-  line-height: 1.7;
-  margin-bottom: 40px;
-  opacity: 0;
-}
- 
+
 /* CTAs alinhados à esquerda */
 .ctas {
   display: flex;
@@ -117,20 +88,18 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
- 
+
 .ctas .btn {
   opacity: 0;
 }
- 
+
 /* Responsividade */
 @media (max-width: 768px) {
   .title {
     font-size: clamp(40px, 12vw, 64px);
   }
- 
+
   .hero {
     padding-top: 100px;
   }
- 
 }
- 
