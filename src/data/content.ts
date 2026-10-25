@@ -4,6 +4,8 @@ import dolce from '../assets/preview/dolceFemme.webp'
 import fernando from '../assets/preview/drFernando.webp'
 import vanguard from '../assets/preview/vanguard.webp'
 import portacu from '../assets/preview/portacu.webp'
+import dental1500 from '../assets/preview/dental1500.png'
+import orlandofamily from '../assets/preview/orlandofamily.png'
 export interface Skill {
   name: string
   level: string
@@ -119,6 +121,24 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Vite'],
     demoUrl: 'https://projectadvogado.vercel.app/',
     previewImage: fernando,
+  },
+  {
+    tag: 'Landing Page',
+    title: '1500 Dental',
+    description:
+      'Quality dental care for healthy, confident smiles.',
+    tech: ['React', 'TypeScript', 'Vite'],
+    demoUrl: 'https://1500dental.vercel.app/',
+    previewImage: dental1500,
+  },
+  {
+    tag: 'Landing Page',
+    title: 'Orlando Family Dental',
+    description:
+      'Your smile deserves expert care and personalized dental solutions.',
+    tech: ['React', 'TypeScript'],
+    demoUrl: 'https://orlandofamily.vercel.app/',
+    previewImage: orlandofamily,
   },
 ]
 
