@@ -2,7 +2,7 @@ import lash from '../assets/preview/lash-designer.webp'
 import dental from '../assets/preview/dentalClinic.webp'
 import dolce from '../assets/preview/dolceFemme.webp'
 import fernando from '../assets/preview/drFernando.webp'
-import vanguard from '../assets/preview/vanguard.webp'
+import eloyze from '../assets/preview/eloyze.png'
 import portacu from '../assets/preview/portacu.webp'
 import dental1500 from '../assets/preview/dental1500.png'
 import orlandofamily from '../assets/preview/orlandofamily.png'
@@ -87,13 +87,13 @@ export const projects: Project[] = [
     previewImage: portacu,
   },
   {
-    tag: 'Web Application',
-    title: 'Vanguard Advocacy',
+    tag: 'Landing Page',
+    title: 'Eloyze Braids',
     description:
-      'Modern landing page for a law firm, designed to build credibility, strengthen online presence, and increase client acquisition through a strategic, responsive design.',
+      'Modern landing page for a hair braider, designed to showcase braiding styles, highlight services, strengthen online presence, and attract new clients through an elegant, responsive design.',
     tech: ['React', 'TypeScript', 'Tailwind'],
-    demoUrl: 'https://vanguaradvocacy.vercel.app/',
-    previewImage: vanguard,
+    demoUrl: 'https://eloyzebraids.vercel.app/',
+    previewImage: eloyze,
   },
   {
     tag: 'Web Application',
