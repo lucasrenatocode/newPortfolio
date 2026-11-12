@@ -49,6 +49,13 @@ export interface TranslationShape {
     titleGradient: string
     subtitle: string
     visitWebsite: string
+    viewFeedback: string
+    feedbackTitle: string
+    feedbackVia: string
+    feedbackAlt: string
+    closeLabel: string
+    prevLabel: string
+    nextLabel: string
   }
   services: {
     eyebrow: string
@@ -128,6 +135,13 @@ export const translations: Record<Lang, TranslationShape> = {
       titleGradient: 'selecionados',
       subtitle: 'Alguns projetos que mostram como penso sobre produto, código e atenção aos detalhes.',
       visitWebsite: 'Visitar site',
+      viewFeedback: 'Ver feedback',
+      feedbackTitle: 'Feedback do cliente',
+      feedbackVia: 'via WhatsApp',
+      feedbackAlt: 'Feedback no WhatsApp de',
+      closeLabel: 'Fechar',
+      prevLabel: 'Anterior',
+      nextLabel: 'Próximo',
     },
     services: {
       eyebrow: 'Serviços',
@@ -212,6 +226,13 @@ export const translations: Record<Lang, TranslationShape> = {
       titleGradient: 'work',
       subtitle: 'A few projects that show how I approach product, code and craft.',
       visitWebsite: 'Visit website',
+      viewFeedback: 'View feedback',
+      feedbackTitle: 'Client feedback',
+      feedbackVia: 'via WhatsApp',
+      feedbackAlt: 'WhatsApp feedback from',
+      closeLabel: 'Close',
+      prevLabel: 'Previous',
+      nextLabel: 'Next',
     },
     services: {
       eyebrow: 'Services',

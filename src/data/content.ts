@@ -6,10 +6,22 @@ import eloyze from '../assets/preview/eloyze.png'
 import portacu from '../assets/preview/portacu.webp'
 import dental1500 from '../assets/preview/dental1500.png'
 import orlandofamily from '../assets/preview/orlandofamily.png'
+
+// Prints de feedback (crie a pasta src/assets/feedback e coloque os arquivos lá)
+import SophiaFeedback from '../assets/feedback/Sophia.png'
+import eloyzeFeedback from '../assets/feedback/Eloyze.png'
+import MarcosFeedback from '../assets/feedback/Marcos.png'
+
 export interface Skill {
   name: string
   level: string
   iconKey: 'react' | 'typescript' | 'javascript' | 'html5' | 'css3' | 'git' | 'github' | 'vite'
+}
+
+export interface Feedback {
+  images: string[]
+  clientName: string
+  business: string
 }
 
 export interface Project {
@@ -19,6 +31,7 @@ export interface Project {
   tech: string[]
   demoUrl: string
   previewImage: string
+  feedback?: Feedback
 }
 
 export interface Service {
@@ -76,6 +89,11 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'CSS Modules'],
     demoUrl: 'https://lashsoft.vercel.app/',
     previewImage: lash,
+    feedback: {
+      images: [SophiaFeedback],
+      clientName: 'Sophia Ellen',
+      business: 'Lash Designer',
+    },
   },
   {
     tag: 'Landing Page',
@@ -85,6 +103,11 @@ export const projects: Project[] = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://superportacu.com.br/',
     previewImage: portacu,
+    feedback: {
+      images: [MarcosFeedback],
+      clientName: 'Marcos Pessanha',
+      business: 'Buy domain',
+    },
   },
   {
     tag: 'Landing Page',
@@ -94,6 +117,11 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Tailwind'],
     demoUrl: 'https://eloyzebraids.vercel.app/',
     previewImage: eloyze,
+    feedback: {
+      images: [eloyzeFeedback],
+      clientName: 'Ester Eloyze',
+      business: 'Trancista',
+    },
   },
   {
     tag: 'Web Application',

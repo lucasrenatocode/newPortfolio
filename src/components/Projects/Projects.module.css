@@ -143,3 +143,8 @@
   pointer-events: none;
   display: block;
 }
+.feedbackBtn {
+  font: inherit;
+  cursor: pointer;
+  background: transparent;
+}
