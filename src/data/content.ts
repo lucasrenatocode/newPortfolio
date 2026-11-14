@@ -8,9 +8,9 @@ import dental1500 from '../assets/preview/dental1500.png'
 import orlandofamily from '../assets/preview/orlandofamily.png'
 
 // Prints de feedback (crie a pasta src/assets/feedback e coloque os arquivos lá)
-import SophiaFeedback from '../assets/feedback/Sophia.png'
-import eloyzeFeedback from '../assets/feedback/Eloyze.png'
-import MarcosFeedback from '../assets/feedback/Marcos.png'
+import SophiaFeedback from '../assets/Feedback/Sophia.png'
+import eloyzeFeedback from '../assets/Feedback/Eloyze.png'
+import MarcosFeedback from '../assets/Feedback/Marcos.png'
 
 export interface Skill {
   name: string
